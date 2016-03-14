@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jan Jezek"]
   spec.email         = ["mail@mediatainment-productions.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Enables to authenticate devise on a meteor hosted mongoid server"
+  spec.description   = "This app closes the gap between the huge world of ruby and meteor. Simply install, configure and use it to connect to the desired meteor server."
+  spec.homepage      = "https://www.github.com/mediatainment/mongoid_devise_for_meteor"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
