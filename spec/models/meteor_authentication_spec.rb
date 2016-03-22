@@ -86,6 +86,18 @@ describe DeviseMeteor::MeteorUserModel do
           expect(@user.emails).to include result2
         end
 
+        it 'does not have duplicated emails with different verified status' do
+          confirmed = {address: @user.email, verified: true}
+          @user.confirm
+
+          @user.email = "another@email.com"
+          unconfirmed = {address: @user.email, verified: false}
+          @user.save!
+          expect(@user.emails).to include confirmed
+          expect(@user.emails).to include unconfirmed
+          expect(@user.emails.size).to eql 2
+        end
+
       end
 
       describe 'verified' do
