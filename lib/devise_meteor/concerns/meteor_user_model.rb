@@ -1,4 +1,4 @@
-module MongoidDeviseForMeteor
+module DeviseMeteor
   module MeteorUserModel
     extend ActiveSupport::Concern
 
@@ -6,7 +6,7 @@ module MongoidDeviseForMeteor
       # createdAt is needed, so we take regular timestamps and remap them
       include Mongoid::Timestamps
 
-      # is used by mongoid_devise_for_meteor
+      # is used by devise_meteor
       field :createdAt, type: Time
       # aliasing devise created_at to be able
       # to use it with meteors createdAt
@@ -17,8 +17,8 @@ module MongoidDeviseForMeteor
       field :firstName, type: String, as: :first_name
       field :lastName, type: String, as: :last_name
       # profile relation
-      embeds_one :profile, autobuild: true, class_name: "MongoidDeviseForMeteor::MeteorProfile"
-      embeds_one :services, autobuild: true, class_name: "MongoidDeviseForMeteor::MeteorService"
+      embeds_one :profile, autobuild: true, class_name: "DeviseMeteor::MeteorProfile"
+      embeds_one :services, autobuild: true, class_name: "DeviseMeteor::MeteorService"
 
       before_create :meteor_init
       before_validation :meteor_map_attributes
@@ -67,11 +67,11 @@ module MongoidDeviseForMeteor
 
     # Verifies whether a password (ie from sign in) is the user password.
     def valid_password?(password)
-      Devise::Meteor::Encrypter.compare(password, encrypted_password)
+      DeviseMeteor::Encrypter.compare(password, encrypted_password)
     end
 
     def password_digest(password)
-      Devise::Meteor::Encrypter.digest(password)
+      DeviseMeteor::Encrypter.digest(password)
     end
 
     private
@@ -81,7 +81,7 @@ module MongoidDeviseForMeteor
       {bcrypt: encrypted_password}
     end
 
-    # maps current email to mongoid_devise_for_meteor emails: :address
+    # maps current email to devise_meteor emails: :address
     def meteor_map_email
       if attribute_changed?(:email) && email.present?
         existing_meteor_mail = meteor_get_hash_by_email(email)
@@ -113,7 +113,7 @@ module MongoidDeviseForMeteor
       {address: email, verified: verified_state}
     end
 
-    # remaps devise for mongoid_devise_for_meteor
+    # remaps devise for devise_meteor
     def meteor_map_attributes
       meteor_map_email
       meteor_map_name

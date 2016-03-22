@@ -37,7 +37,7 @@ class User
   # authentication token
   field :authentication_token, :type => String
 
-  # mongoid_devise_for_meteor authentication
-  include MongoidDeviseForMeteor::MeteorUserModel
+  # devise_meteor authentication
+  include DeviseMeteor::MeteorUserModel
 
 end

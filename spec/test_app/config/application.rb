@@ -7,7 +7,7 @@ require "action_view/railtie"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-require "mongoid_devise_for_meteor"
+require "devise_meteor"
 
 module TestApp
   class Application < Rails::Application

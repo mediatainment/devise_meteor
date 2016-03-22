@@ -22,12 +22,12 @@ module Devise
         # check existing passwords and synchronize them
         if meteor_auth_missing?(resource)
           # when already devise credentials stored
-          # assign them to mongoid_devise_for_meteor fields
+          # assign them to devise_meteor fields
           new_hashed_password = User.new(:password => password).encrypted_password
           resource.services.set(password: {bcrypt: new_hashed_password})
 
         elsif devise_auth_missing?(resource)
-          # when user registered through mongoid_devise_for_meteor
+          # when user registered through devise_meteor
           # and credentials for devise not present
           email = params_auth_hash[:email]
           crypt = resource.services.password[:bcrypt]
@@ -84,7 +84,7 @@ module Devise
       end
 
       def encrypt(resource, password)
-        # some old encryption code
+        # some old strategies code
       end
 
     end

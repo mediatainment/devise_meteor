@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mongoid_devise_for_meteor/version'
+require 'devise_meteor/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "mongoid_devise_for_meteor"
-  spec.version = MongoidDeviseForMeteor::VERSION
+  spec.name = "devise_meteor"
+  spec.version = DeviseMeteor::VERSION
   spec.authors = ["Jan Jezek"]
   spec.email = ["mail@mediatainment-productions.com"]
 
-  spec.summary = "Enables to authenticate devise on a mongoid_devise_for_meteor hosted mongoid server"
-  spec.description = "This app closes the gap between the huge world of ruby and mongoid_devise_for_meteor. Simply install, configure and use it to connect to the desired mongoid_devise_for_meteor server."
-  spec.homepage = "https://www.github.com/mediatainment/mongoid_devise_for_meteor"
+  spec.summary = "Enables to authenticate devise on a devise_meteor hosted mongoid server"
+  spec.description = "This app closes the gap between the huge world of ruby and devise_meteor. Simply install, configure and use it to connect to the desired devise_meteor server."
+  spec.homepage = "https://www.github.com/mediatainment/devise_meteor"
   spec.license = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

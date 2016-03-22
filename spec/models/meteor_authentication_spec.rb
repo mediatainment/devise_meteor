@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe MongoidDeviseForMeteor::MeteorUserModel do
+describe DeviseMeteor::MeteorUserModel do
 
   let(:meteor_user_attributes) {
 
@@ -117,7 +117,7 @@ describe MongoidDeviseForMeteor::MeteorUserModel do
     describe 'profile' do
 
       it 'has a relation to Profile' do
-        expect(@user.profile).to be_a MongoidDeviseForMeteor::MeteorProfile
+        expect(@user.profile).to be_a DeviseMeteor::MeteorProfile
       end
 
       describe 'name' do
@@ -154,7 +154,7 @@ describe MongoidDeviseForMeteor::MeteorUserModel do
 
     describe 'services' do
 
-      # this example is copy pasted from the mongoid_devise_for_meteor documentation
+      # this example is copy pasted from the devise_meteor documentation
       # http://docs.meteor.com/#/full/meteor_users
       # bcrypt: password decrypted is "asdfasdf"
       let(:valid_services_hash) {
@@ -178,7 +178,7 @@ describe MongoidDeviseForMeteor::MeteorUserModel do
       }
 
       it 'must have a service relation' do
-        expect(@user.services).to be_a MongoidDeviseForMeteor::MeteorService
+        expect(@user.services).to be_a DeviseMeteor::MeteorService
       end
 
       context 'password' do

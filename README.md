@@ -29,7 +29,7 @@ But for now, it's possible to generate a new one by using the default methods pr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mongoid_devise_for_meteor'
+gem 'devise_meteor'
 ```
 
 And then execute:
@@ -56,7 +56,7 @@ It is already a placeholder near the bottom of the file:
 Add the following after your field definitions in your `resource` (mostly the User model).
 
 ```ruby
-  include MongoidDeviseForMeteor::MeteorUserModel
+  include DeviseMeteor::MeteorUserModel
 
   # disable the mapping for the password simply use this line (not working right now)
   disable_meteor_mapping
@@ -69,7 +69,7 @@ Also the handling for password updates are made in this class.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mongoid_devise_for_meteor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mediatainment/devise_meteor This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

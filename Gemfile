@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in mongoid_devise_for_meteor.gemspec
+# Specify your gem's dependencies in devise_meteor.gemspec
 gemspec
 
 # Declare any dependencies that are still in development here instead of in

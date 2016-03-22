@@ -1,4 +1,4 @@
-module MongoidDeviseForMeteor
+module DeviseMeteor
   class MeteorService
     include Mongoid::Document
 

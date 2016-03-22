@@ -1,6 +1,6 @@
 require 'rails'
 
-module MongoidDeviseForMeteor
+module DeviseMeteor
   class Railtie < Rails::Railtie
 
   end

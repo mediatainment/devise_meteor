@@ -5,7 +5,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: mongoid_devise_for_meteor_development
+      database: devise_meteor_development
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -69,7 +69,7 @@ development:
 test:
   clients:
     default:
-      database: mongoid_devise_for_meteor_test
+      database: devise_meteor_test
       hosts:
         - localhost:27017
       options:

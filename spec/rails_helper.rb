@@ -6,7 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'factory_girl_rails'
-require 'mongoid_devise_for_meteor'
+require 'devise_meteor'
 require 'capybara/rspec'
 require 'database_cleaner'
 require 'faker'
@@ -38,7 +38,7 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.include FactoryGirl::Syntax::Methods
 
-  config.include MongoidDeviseForMeteor::Engine.routes.url_helpers
+  config.include DeviseMeteor::Engine.routes.url_helpers
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.

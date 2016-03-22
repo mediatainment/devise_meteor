@@ -1,6 +1,6 @@
-module MongoidDeviseForMeteor
+module DeviseMeteor
   class Engine < ::Rails::Engine
-    isolate_namespace MongoidDeviseForMeteor
+    isolate_namespace DeviseMeteor
 
     config.generators do |g|
       g.test_framework :rspec

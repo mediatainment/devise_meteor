@@ -1,9 +1,9 @@
-MongoidDeviseForMeteor.configure do |config|
+DeviseMeteor.configure do |config|
 
 
 end
 
-# you can uncomment this lines to match up "strings" as ObjectId
+# you can uncomment this lines to match up "strings" ObjectIds from accounts-* packages
 
 #class BSON::ObjectId
 #  def self.mongoize(k)

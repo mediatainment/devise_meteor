@@ -1,4 +1,4 @@
-module MongoidDeviseForMeteor
+module DeviseMeteor
   class MeteorProfile
     include Mongoid::Document
 
