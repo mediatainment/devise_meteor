@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email = ["mail@mediatainment-productions.com"]
 
   spec.summary = "Enables to authenticate devise on a devise_meteor hosted mongoid server"
-  spec.description = "This app closes the gap between the huge world of ruby and devise_meteor. Simply install, configure and use it to connect to the desired devise_meteor server."
+  spec.description = "This app closes the gap between the huge world of ruby and meteor through devise. Simply install, configure and use it to connect to your desired meteor server."
   spec.homepage = "https://www.github.com/mediatainment/devise_meteor"
   spec.license = "MIT"
 
