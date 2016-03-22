@@ -4,10 +4,10 @@ module MongoidDeviseForMeteor
 
       source_root File.expand_path("../../templates", __FILE__)
 
-      desc "Creates initializer for meteor specific config"
+      desc "Creates initializer for mongoid_devise_for_meteor specific config"
 
       def copy_initializer
-        template "meteor_initializer.rb", "config/initializers/meteor.rb"
+        template "meteor_initializer.rb", "config/initializers/mongoid_devise_for_meteor.rb"
 
         puts "Added initializer to your app."
       end
