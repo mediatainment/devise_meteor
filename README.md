@@ -56,7 +56,7 @@ It is already a placeholder near the bottom of the file:
 Add the following after your field definitions in your `resource` (mostly the User model).
 
 ```ruby
-  include MeteorModel
+  include MeteorUserModel
   # disable the mapping for the password simply use this line
   disable_meteor_mapping
 
