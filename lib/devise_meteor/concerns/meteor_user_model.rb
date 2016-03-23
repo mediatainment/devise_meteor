@@ -65,15 +65,6 @@ module DeviseMeteor
       set(emails: emails_temp)
     end
 
-    # Verifies whether a password (ie from sign in) is the user password.
-    def valid_password?(password)
-      DeviseMeteor::Encrypter.compare(password, encrypted_password)
-    end
-
-    def password_digest(password)
-      DeviseMeteor::Encrypter.digest(password)
-    end
-
     private
 
     # build a default password hash

@@ -1,15 +1,15 @@
-module DeviseMeteor
-  module Encrypter
+module DeviseMeteorAdapter
+  def digest(klass, password)
+    klass.pepper = nil
+    password = ::Digest::SHA256.hexdigest(password)
+    super
+  end
 
-    def self.digest(password)
-      sha256_hasher = DeviseMeteor::BCryptSHA256Hasher.new
-      sha256_hasher.encode(password, sha256_hasher.salt)
-    end
-
-
-    def self.compare(password, encrypted_password)
-      sha256_hasher = DeviseMeteor::BCryptSHA256Hasher.new
-      sha256_hasher.verify(password, encrypted_password)
-    end
+  def compare(klass, hashed_password, password)
+    klass.pepper = nil
+    password = ::Digest::SHA256.hexdigest(password)
+    super
   end
 end
+
+Devise::Encryptor.singleton_class.prepend(DeviseMeteorAdapter)
